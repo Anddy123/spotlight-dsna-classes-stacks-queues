@@ -18,9 +18,19 @@ class Stack {
   pop() {
     return this.#list.pop();
   }
-  
+
 }
 
-class Queue {}
+class Queue {
+
+  #list = [];
+  construction(initialValue) {
+    if (initialValue) {
+      this.#list = initialValue;
+    }
+  }
+  
+  
+}
 
 module.exports = { Stack, Queue };

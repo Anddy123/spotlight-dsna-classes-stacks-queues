@@ -13,3 +13,12 @@ describe("Stack Class", () => {
   });
   // add more tests here...
 });
+
+describe('Queue Class', () => {
+
+  it('.hasNext() returns false if there are no items in the queue', () => {
+    const queue = new Queue();
+    expect(queue.hasNext()).toEqual(false);
+  });
+  
+});
