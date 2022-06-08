@@ -30,7 +30,13 @@ class Queue {
     }
   }
   
-  
+  hasNext() {
+    if (this.#list.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 module.exports = { Stack, Queue };
