@@ -37,6 +37,14 @@ class Queue {
       return false;
     }
   }
+
+  enqueue(item) {
+    this.#list.push(item);
+  }
+
+  dequeue() {
+    return this.#list.shift();
+  }
 }
 
 module.exports = { Stack, Queue };

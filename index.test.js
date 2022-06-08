@@ -21,4 +21,23 @@ describe('Queue Class', () => {
     expect(queue.hasNext()).toEqual(false);
   });
 
+  it('.hasNext() returns true if there is at least item in the queue', () => {
+    const queue = new Queue();
+    queue.enqueue(1);
+    expect(queue.hasNext()).toEqual(true);
+  });
+
+  it('.enqueue() adds an item to the queue, and .dequeue() returns the first item in the queue', () => {
+    const queue = new Queue();
+    queue.enqueue('cody');
+    expect(queue.dequeue()).toEqual('cody');
+  });
+
+  it('.dequeue() removes the first item in the queue', () => {
+    const queue = new Queue();
+    queue.enqueue('cody');
+    queue.dequeue();
+    expect(queue.hasNext()).toEqual(false);
+  });
+  
 });
