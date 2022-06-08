@@ -18,7 +18,10 @@ class Stack {
   pop() {
     return this.#list.pop();
   }
-
+  
+  get readableList() {
+    return this.#list.toString();
+  }
 }
 
 class Queue {
@@ -47,4 +50,14 @@ class Queue {
   }
 }
 
-module.exports = { Stack, Queue };
+function reverse(array) {
+    const stack = new Stack()
+    
+    for (let i = 0; i < array.length; i++) {
+        stack.push(array[i])
+    }
+    console.log(stack, 'reverse')
+    return stack;
+  }
+
+module.exports = { Stack, Queue, reverse };
